@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  # Node.js app service
+  dev-db:
+    image: postgres:12 # Using the official Node.js image
+    ports:
+      - '5434:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+
+networks:
+  freecodecamp:
