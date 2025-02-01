@@ -38,6 +38,7 @@ model Bookmark{
   link String
 
   userId Int
+    //If user schema will delete  this bookmark schema will delete as well that because we use  onDelete: Cascade
   user User @relation(fields: [userId], references: [id])
 
   @@map("bookmarks")
